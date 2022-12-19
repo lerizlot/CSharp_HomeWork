@@ -4,8 +4,23 @@
 // 782 -> 8
 // 918 -> 1
 
+int SecondNumber(int number)
+{
+    int actionOne = number % 100; // 56
+    int actionTwo = actionOne / 10; // 5
 
+    return actionTwo;
+}
+Console.Write("Input your number: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
+int result = SecondNumber(num);
+
+if (num <= 999 && num >= 100)
+    Console.WriteLine($"The second number is {result}");
+else
+    Console.WriteLine("Your number is wrong. Please input a three-digit number.");
+    
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
 // 645 -> 5
