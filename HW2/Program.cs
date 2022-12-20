@@ -29,16 +29,25 @@ else
 Console.WriteLine("Task2. Input your number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+int ThirdDigit(int number)
+{
+    int count;
+    int num = number;
+    while (num > 999)
+    {
+        count = num / 10;
+        num = count;
+    }
+    return num;
+}
+
 if (number < 100)
     Console.WriteLine("There is no third digit");
-if (number > 99 && number < 1000)
-    Console.WriteLine($"The third digit is {number % 10}");
-if (number > 999 && number < 10000)
-    Console.WriteLine($"The third digit is {number / 10 % 10}");
-if (number > 9999 && number < 100000)
-    Console.WriteLine($"The third digit is {number / 100 % 10}");
-if (number > 99999 && number < 1000000)
-    Console.WriteLine($"The third digit is {number / 1000 % 10}");    
+else
+{
+    int thirdDigit = ThirdDigit(number);
+    Console.WriteLine($"The third digit is {thirdDigit % 10}");
+}
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
