@@ -32,7 +32,7 @@ int maximum = number1;
 if (number2 > number3) maximum = number2;
 else
 if (number3 > number1) maximum = number3;
-    Console.WriteLine($"max number is {maximum}");
+Console.WriteLine($"max number is {maximum}");
 
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 
@@ -56,8 +56,7 @@ else
 Console.WriteLine("Input number N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 2; i <=N; i++)
+for (int i = 2; i <= N; i += 2)
 {
-    if (i % 2 == 0)
     Console.WriteLine(i);
 }
