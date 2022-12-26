@@ -4,6 +4,25 @@
 // 12821 -> да
 // 23432 -> да
 
+int PalindromeCheck(int num)
+{
+    int result = 0;
+    while (num > 0)
+    {
+        result = result * 10 + num % 10;
+        num /= 10;
+    }
+    return result;
+}
+Console.WriteLine("Input your number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+int result = PalindromeCheck(num);
+if (num == result)
+    Console.WriteLine($"Your number is a palindrome");
+else
+    Console.WriteLine($"Your number is not a palindrome");
+
 // Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
 // A (3,6,8); B (2,1,-7), -> 15.84
