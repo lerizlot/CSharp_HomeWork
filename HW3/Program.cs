@@ -13,3 +13,18 @@
 
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
+
+void CubeCount(int number)
+{
+    int count = 1;
+    while (count <= number)
+    {
+        Console.Write(count * count * count + " ");
+        count++;
+    }
+}
+
+Console.Write("Task 3. Input your number: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+CubeCount(N);
